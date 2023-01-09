@@ -15,6 +15,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.lekrom.whatsapplink.ui.theme.WhatsappLinkTheme
 
+private const val MAX_DDD_CHAR = 2
+private const val MIN_CELL_CHAR = 8
+private const val MAX_CELL_CHAR = 9
+
 @Composable
 fun FormScreen(
     action: (ddd: String, cellNumber: String) -> Unit
@@ -36,7 +40,7 @@ fun FormScreen(
                 modifier = Modifier
                     .padding(horizontal = 16.dp)
                     .width(72.dp),
-                maxChar = 2,
+                maxChar = MAX_DDD_CHAR,
                 value = ddd
             ) { ddd = it }
             EditText(
@@ -44,7 +48,7 @@ fun FormScreen(
                 modifier = Modifier
                     .padding(end = 16.dp)
                     .fillMaxWidth(),
-                maxChar = 9,
+                maxChar = MAX_CELL_CHAR,
                 value = cellNumber
             ) { cellNumber = it }
         }
@@ -53,7 +57,7 @@ fun FormScreen(
                 .padding(16.dp)
                 .fillMaxWidth(),
             onClick = {
-                if (ddd.length == 2 && 8 <= cellNumber.length && cellNumber.length <= 9) {
+                if (ddd.length == MAX_DDD_CHAR && cellNumber.length >= MIN_CELL_CHAR) {
                     action(ddd, cellNumber)
                 }
             }
