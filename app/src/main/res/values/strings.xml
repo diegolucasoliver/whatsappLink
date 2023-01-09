@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Whatsapp Link</string>
+
+    <string name="url">https://api.whatsapp.com/send?phone=55%1$s%2$s</string>
+    <string name="ddd">DDD</string>
+    <string name="cell_phone">Celular</string>
+    <string name="open">Abrir</string>
+</resources>
