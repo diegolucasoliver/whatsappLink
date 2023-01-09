@@ -35,7 +35,7 @@ fun FormScreen(
                 hint = stringResource(R.string.ddd),
                 modifier = Modifier
                     .padding(horizontal = 16.dp)
-                    .width(64.dp),
+                    .width(72.dp),
                 maxChar = 2,
                 value = ddd
             ) { ddd = it }
