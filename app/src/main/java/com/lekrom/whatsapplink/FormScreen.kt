@@ -39,7 +39,7 @@ fun FormScreen(
                 hint = stringResource(R.string.ddd),
                 modifier = Modifier
                     .padding(horizontal = 16.dp)
-                    .width(72.dp),
+                    .weight(0.35f),
                 maxChar = MAX_DDD_CHAR,
                 value = ddd
             ) { ddd = it }
@@ -47,7 +47,7 @@ fun FormScreen(
                 hint = stringResource(R.string.cell_phone),
                 modifier = Modifier
                     .padding(end = 16.dp)
-                    .fillMaxWidth(),
+                    .weight(1f),
                 maxChar = MAX_CELL_CHAR,
                 value = cellNumber
             ) { cellNumber = it }
